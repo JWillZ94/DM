@@ -8,6 +8,12 @@ body {
   justify-content: end;
 }
 
+.soc-media {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+
 .nav-section {
   display: flex;
   justify-content: space-around;
@@ -22,31 +28,41 @@ body {
   padding-right: 2rem;
 }
 
-.nav-bar a {
+.nav-link {
+  position: relative;
   color: darkgray;
   text-decoration: none;
 }
 
-@keyframes nav-hover {
-  0% {
-    border-bottom: 1px solid black;
-  }
-  25% {
-    border-bottom: 2px solid red;
-  }
-  50% {
-    border-bottom: 3px solid yellow;
-  }
-  75% {
-    border-bottom: 4px solid blue;
-  }
-  100% {
-    border-bottom: 5px solid green;
-  }
+.nav-link:hover {
+  color: darkgray;
 }
 
-.nav-bar a:hover {
-  animation-name: nav-hover;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
+.nav-link:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: darkgray;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#body-1a {
+  background-color: yellow;
+}
+
+#body-2a {
+  background-color: orange;
 }
