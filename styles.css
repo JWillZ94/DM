@@ -1,5 +1,6 @@
 body {
   font-family: 'Raleway', sans-serif;
+  margin: 0;
 }
 
 .contact-links {
@@ -60,9 +61,28 @@ body {
 }
 
 #body-1a {
+  height: 500px;
   background-color: yellow;
 }
 
 #body-2a {
+  height: 300px;
   background-color: orange;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#body-2aa {
+  height: 100px;
+  background-color: blue;
+}
+
+#body-2ab {
+  height: 100px;
+  background-color: green;
+}
+
+#body-3a {
+  height: 300px;
+  background-color: red;
 }
