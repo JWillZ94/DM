@@ -1,0 +1,25 @@
+{
+  "name": "dm",
+  "version": "1.0.0",
+  "description": "Marketing site.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JWillZ94/DM.git"
+  },
+  "author": "Jerel Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JWillZ94/DM/issues"
+  },
+  "homepage": "https://github.com/JWillZ94/DM#readme",
+  "dependencies": {
+    "express": "*",
+    "ejs": "*",
+    "body-parser": "*"
+  },
+  "devDependencies": {}
+}
