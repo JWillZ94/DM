@@ -31,6 +31,6 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('server connected');
 });
