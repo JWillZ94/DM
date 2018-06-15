@@ -21,9 +21,10 @@
   },
   "homepage": "https://github.com/JWillZ94/DM#readme",
   "dependencies": {
-    "express": "*",
+    "body-parser": "*",
     "ejs": "*",
-    "body-parser": "*"
+    "express": "*",
+    "mongoose": "^5.1.4"
   },
   "devDependencies": {}
 }

@@ -207,7 +207,7 @@ body {
 
 /* Home ===================================*/
 
-#body-1a {
+#body-1 {
   height: 500px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-attachment: fixed;
@@ -226,26 +226,32 @@ body {
   color: #f2f2f2;
 }
 
-#body-2a {
-  height: 300px;
+#body-2 {
   border: 1px solid black;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
 }
 
-#body-2aa {
-  height: 100px;
+#body-3 {
   border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
-#body-2ab {
-  height: 100px;
-  border: 1px solid black;
+.sub-body-3 {
+  max-width: 500px;
 }
 
-#body-3a {
-  height: 300px;
+#body-4 {
   border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.body-4-fa {
+  font-size: 4em;
 }
 
 /* About ===================================*/
