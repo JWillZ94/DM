@@ -41,10 +41,6 @@ app.get('/work', (req, res) => {
   res.render('work');
 });
 
-app.get('/blog', (req, res) => {
-  res.render('blog');
-});
-
 app.get('/contact', (req, res) => {
   res.render('contact');
 });
@@ -52,7 +48,7 @@ app.get('/contact', (req, res) => {
 // API ===========================================
 
 var blog = require('./api/blog');
-app.use('/api/blog', blog);
+app.use('/blog', blog);
 
 // Server ========================================
 

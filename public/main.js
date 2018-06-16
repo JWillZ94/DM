@@ -20,4 +20,38 @@ $(document).ready(function() {
     }
   });
 
+  $.ajax({
+      url: "/blog/articles",
+      dataType: 'json'
+    })
+    .done(function(data) {
+      $.map(data, post => {
+        $('#posts').append(
+          `
+            <h3><a href="/blog/article/${post.title}">${post.title}</a></h3>
+            <p>${post.content}</p>
+            <p>${post.post_date}</p>
+            <p>${post.last_update}</p>
+          `
+        );
+      });
+    });
+
+  $.ajax({
+      url: "/blog/articles",
+      dataType: 'json'
+    })
+    .done(function(data) {
+      $.map(data, post => {
+        $('#article').append(
+          `
+            <h3>${post.title}</h3>
+            <p>${post.content}</p>
+            <p>${post.post_date}</p>
+            <p>${post.last_update}</p>
+          `
+        );
+      });
+    });
+
 });
