@@ -14,4 +14,11 @@ router.get('/api/posts', (req, res) => {
   });
 });
 
+router.get('/api/posts/:id', (req, res) => {
+  Post.findById(req.params.id, (err, post) => {
+    if (err) throw err;
+    res.json(post);
+  });
+});
+
 module.exports = router;
