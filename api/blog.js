@@ -4,18 +4,35 @@ const mongoose = require('mongoose');
 Post = require('../models/Post');
 
 router.get('/', (req, res) => {
-  res.render('blog');
-});
-
-router.get('/api/posts', (req, res) => {
-  Post.find((err, posts) => {
+  Post.find({}, (err, posts) => {
     if (err) throw err;
-    res.json(posts);
+    res.render('blog', { posts: posts });
   });
 });
 
-router.get('/api/posts/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   Post.findById(req.params.id, (err, post) => {
+    if (err) throw err;
+    res.json(post);
+  });
+});
+
+router.post('/', (req, res) => {
+  Post.create(req.body, (err, post) => {
+    if (err) throw err;
+    res.json(post);
+  });
+});
+
+router.put('/:id', (req, res) => {
+  Post.findByIdAndUpdate(req.params.id, req.body, (err, post) => {
+    if (err) throw err;
+    res.json(post);
+  });
+});
+
+router.delete('/:id', (req, res) => {
+  Post.findByIdAndDelete(req.params.id, req.body, (err, post) => {
     if (err) throw err;
     res.json(post);
   });

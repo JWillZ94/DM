@@ -50,8 +50,8 @@ app.get('/contact', (req, res) => {
 var blog = require('./api/blog');
 app.use('/blog', blog);
 
-var article = require('./api/article');
-app.use('/article', article);
+var admin = require('./api/admin');
+app.use('/admin', admin);
 
 // Server ========================================
 
