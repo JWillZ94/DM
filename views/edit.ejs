@@ -1,7 +1,7 @@
 <% include partials/header %>
-<div class="admin-content">
-  <p>Create Blog Post</p>
-  <form action="/blog" method="post">
+<div class="edit-content">
+  <p>Update Blog Post</p>
+  <form action="/blog" method="put">
     <div>
       <label for="title">Title: </label>
       <input type="text" name="title">
@@ -11,8 +11,8 @@
       <textarea name="content" id="" cols="100" rows="20"></textarea>
     </div>
     <div>
-      <label for="post_date">Date Created: </label>
-      <input type="date" name="post_date">
+      <label for="last_updated">Last Date Updated: </label>
+      <input type="date" name="last_updated">
     </div>
     <input type="submit">
   </form>

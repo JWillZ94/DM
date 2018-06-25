@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   Post.findByIdAndUpdate(req.params.id, req.body, (err, post) => {
     if (err) throw err;
-    res.json(post);
+    res.redirect('/blog');
   });
 });
 
