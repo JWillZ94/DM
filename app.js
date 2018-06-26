@@ -47,11 +47,14 @@ app.get('/contact', (req, res) => {
 
 // API ===========================================
 
-var blog = require('./api/blog');
+let blog = require('./api/blog');
 app.use('/blog', blog);
 
-var admin = require('./api/admin');
+let admin = require('./api/admin');
 app.use('/admin', admin);
+
+let edit = require('./api/edit');
+app.use('/edit', edit);
 
 // Server ========================================
 

@@ -30,11 +30,28 @@ $(document).ready(function() {
               <p>${post._id}</p>
               <p>${post.title}</p>
               <p>${post.content}</p>
+              <a href="/edit/${post._id}">Edit Post</a>
+              <br>
               <a href="/blog" id="back"><<<< View All Blog Posts</a>
             </div>
           `
         );
     })
   });
+
+  // $('.update-form').submit(function(e) {
+  //   e.preventDefault();
+  //   let updateForm = document.getElementById('${e.target.id}');
+  //   let postData = new FormData(updateForm);
+  //   console.log(postData);
+  //   $.ajax({
+  //     url: '/edit/' + e.target.id,
+  //     method: 'PUT',
+  //     data: {
+  //
+  //     }
+  //   });
+  // });
+
 
 });
