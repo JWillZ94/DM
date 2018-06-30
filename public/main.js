@@ -39,19 +39,32 @@ $(document).ready(function() {
     })
   });
 
-  // $('.update-form').submit(function(e) {
-  //   e.preventDefault();
-  //   let updateForm = document.getElementById('${e.target.id}');
-  //   let postData = new FormData(updateForm);
-  //   console.log(postData);
-  //   $.ajax({
-  //     url: '/edit/' + e.target.id,
-  //     method: 'PUT',
-  //     data: {
-  //
-  //     }
-  //   });
-  // });
+  $('.update-form').submit(function(e) {
+    $.ajax({
+      url: '/edit/' + e.target.id,
+      method: 'PUT',
+      data: {
+        title: $('#edit-title').val(),
+        content: $('#edit-content').val(),
+        last_updated: $('#edit-last-updated').val()
+      }
+    })
+    .done((data) => {
+      console.log(data.last_updated);
+    });
+  });
 
+  $('.delete').click(function(e) {
+    $.ajax({
+      url: '/edit/' + e.target.id,
+      method: 'DELETE',
+      data: {
+        id: e.target.id
+      }
+    })
+    .done((data) => {
+      window.location.href = '/blog';
+    });
+  });
 
 });

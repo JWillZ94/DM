@@ -23,7 +23,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   Post.findByIdAndDelete(req.params.id, req.body, (err, post) => {
     if (err) throw err;
-    res.redirect('/blog');
+    res.json(post);
   });
 });
 

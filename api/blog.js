@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   Post.create(req.body, (err, post) => {
     if (err) throw err;
-    res.json(post);
+    res.redirect('/blog');
   });
 });
 

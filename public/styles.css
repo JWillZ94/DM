@@ -20,6 +20,10 @@ body {
   padding-right: 1rem;
 }
 
+#create-last-updated {
+  display: none;
+}
+
 .soc-media {
   display: flex;
   justify-content: space-around;
