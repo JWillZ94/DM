@@ -1,22 +1,22 @@
 <% include partials/header %>
 <div class="edit-content">
-  <p>Update Blog Post</p>
-  <form enctype="multipart/form-data" action="/blog" class="update-form" id="<%= post._id %>" method="get">
-    <div>
+  <p class="section-title">Update Blog Post</p>
+  <form enctype="multipart/form-data" action="/admin" class="update-form post-form" id="<%= post._id %>" method="get">
+    <div class="form-control">
       <label for="title">Title: </label>
-      <input type="text" id="edit-title" value="<%= post.title %>" name="title">
+      <input type="text" id="edit-title" class="title" value="<%= post.title %>" name="title">
     </div>
-    <div>
+    <div id="add-content" class="form-control">
       <label for="content">Content: </label>
       <textarea name="content" id="edit-content" cols="100" rows="20"><%= post.content %></textarea>
     </div>
-    <div>
+    <div class="form-control">
       <label for="last_updated">Last Date Updated: </label>
       <input type="date" id="edit-last-updated" name="last_updated">
       <!-- <%= post.last_update %> -->
     </div>
-    <input type="submit">
+    <input class="btn" type="submit">
+    <button id="<%= post._id %>" class="delete btn">Delete Post</button>
   </form>
-  <button id="<%= post._id %>" class="delete">Delete Post</button>
 </div>
 <% include partials/footer %>

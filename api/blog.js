@@ -11,23 +11,23 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  Post.findById(req.params.id, (err, post) => {
+  Post.findById(req.params.id, {}, (err, post) => {
     if (err) throw err;
-    res.json(post);
+    res.render('post', { post: post });
   });
 });
 
 router.post('/', (req, res) => {
   Post.create(req.body, (err, post) => {
     if (err) throw err;
-    res.redirect('/blog');
+    res.redirect('/admin');
   });
 });
 
 router.put('/:id', (req, res) => {
   Post.findByIdAndUpdate(req.params.id, req.body, (err, post) => {
     if (err) throw err;
-    res.redirect('/blog');
+    res.json(post);
   });
 });
 

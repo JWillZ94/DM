@@ -1,0 +1,12 @@
+<% include partials/header %>
+<div class="post-content">
+  <div id="post">
+    <p class="section-title"><%= post.title %></p>
+    <div>
+      <p><%= post.post_date %></p>
+      <p><%= post.last_update %></p>
+    </div>
+    <p id="content"><%= post.content %></p>
+  </div>
+</div>
+<% include partials/footer %>

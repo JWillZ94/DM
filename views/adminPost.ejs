@@ -1,0 +1,11 @@
+<% include partials/header %>
+<div class="post-content">
+  <div id="post">
+    <h1><%= post.title %></h1>
+    <p><%= post.content %></p>
+    <p><%= post.post_date %></p>
+    <p><%= post.last_update %></p>
+    <a href="/admin/<%= post._id %>/edit">Edit Post</a>
+  </div>
+</div>
+<% include partials/footer %>

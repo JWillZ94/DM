@@ -20,28 +20,10 @@ $(document).ready(function() {
     }
   });
 
-  $('.post').click(function(e) {
-    $.get("/blog/" + e.target.id, function(post) {
-      $('#posts')
-        .empty()
-        .append(
-          `
-            <div>
-              <p>${post._id}</p>
-              <p>${post.title}</p>
-              <p>${post.content}</p>
-              <a href="/edit/${post._id}">Edit Post</a>
-              <br>
-              <a href="/blog" id="back"><<<< View All Blog Posts</a>
-            </div>
-          `
-        );
-    })
-  });
-
+  // Updates blog post
   $('.update-form').submit(function(e) {
     $.ajax({
-      url: '/edit/' + e.target.id,
+      url: '/blog/' + e.target.id,
       method: 'PUT',
       data: {
         title: $('#edit-title').val(),
@@ -54,16 +36,18 @@ $(document).ready(function() {
     });
   });
 
+
+  // Deletes blog post
   $('.delete').click(function(e) {
     $.ajax({
-      url: '/edit/' + e.target.id,
+      url: '/blog/' + e.target.id,
       method: 'DELETE',
       data: {
         id: e.target.id
       }
     })
     .done((data) => {
-      window.location.href = '/blog';
+      window.location.href = '/admin';
     });
   });
 

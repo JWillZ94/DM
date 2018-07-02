@@ -1,24 +1,34 @@
 <% include partials/header %>
 <div class="admin-content">
-  <p>Create Blog Post</p>
-  <form action="/blog" method="post">
-    <div>
+  <p class="section-title">Admin Section</p>
+  <div id="posts">
+    <% for (let i = 0; i < posts.length; i++) { %>
+      <div class="post" id="<%= posts[i]._id %>">
+        <p><a id="<%= posts[i]._id %>" href="/admin/<%= posts[i]._id %>"><%= posts[i].title %></a></p>
+        <p class="content-cutoff"><a href="/admin/<%= posts[i]._id %>"><%= posts[i].content %></a></p>
+        <p><%= posts[i].post_date %></p>
+      </div>
+    <% } %>
+  </div>
+  <p class="section-title">Create Blog Post</p>
+  <form class="post-form" action="/blog" method="post">
+    <div class="form-control">
       <label for="title">Title: </label>
-      <input type="text" name="title">
+      <input type="text" class="title" name="title">
     </div>
-    <div>
+    <div id="add-content" class="form-control">
       <label for="content">Content: </label>
       <textarea name="content" id="" cols="100" rows="20"></textarea>
     </div>
-    <div>
+    <div class="form-control">
       <label for="post_date">Date Created: </label>
       <input type="date" name="post_date">
     </div>
-    <div>
+    <div class="form-control">
       <label for="last_update">Date Last Updated: </label>
       <input type="date" name="last_update">
     </div>
-    <input type="submit">
+    <input class="btn" type="submit">
   </form>
 </div>
 <% include partials/footer %>

@@ -53,9 +53,6 @@ app.use('/blog', blog);
 let admin = require('./api/admin');
 app.use('/admin', admin);
 
-let edit = require('./api/edit');
-app.use('/edit', edit);
-
 // Server ========================================
 
 app.listen(process.env.PORT || 3000, () => {

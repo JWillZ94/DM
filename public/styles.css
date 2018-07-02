@@ -4,6 +4,7 @@ body {
   background: linear-gradient(to bottom right, #33ccff 0%, #99e6ff 100%);  /* #007399 */
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0 0 3rem 0;
 }
 
 /* Contact Bar ===================================*/
@@ -302,10 +303,57 @@ body {
 
 /* Work ===================================*/
 
-/* Post =======================================*/
+/* Blog =======================================*/
+
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+}
 
 .post {
+  border-bottom: 1px black solid;
+  width: 40%;
+  margin: 0 0 3rem 3rem;
+}
+
+.post-form {
   border: 1px black solid;
+  width: 60%;
+  margin: auto;
+}
+
+.form-control {
+  margin: 0 0 3rem 0;
+}
+
+#add-content {
+  display: flex;
+  align-content: center;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+}
+
+.delete {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.title {
+  width: 600px;
+}
+
+#content {
+  max-width: 80%;
+  margin: auto;
+}
+
+.content-cutoff {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Contact ===================================*/
