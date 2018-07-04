@@ -15,8 +15,10 @@ $(document).ready(function() {
   $(window).bind('scroll', function() {
     if ($(window).scrollTop() > navpos.top) {
       $('nav').addClass('fixed');
+      $('body').css("marginTop", "51px");
     } else {
       $('nav').removeClass('fixed');
+      $('body').css("marginTop", "0px");
     }
   });
 

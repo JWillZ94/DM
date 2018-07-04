@@ -24,6 +24,7 @@
     "body-parser": "*",
     "ejs": "*",
     "express": "*",
+    "moment": "^2.22.2",
     "mongoose": "^5.1.4"
   },
   "devDependencies": {}

@@ -4,9 +4,9 @@
   <div id="posts">
     <% for (let i = 0; i < posts.length; i++) { %>
       <div class="post" id="<%= posts[i]._id %>">
-        <p><a id="<%= posts[i]._id %>" href="/admin/<%= posts[i]._id %>"><%= posts[i].title %></a></p>
-        <p class="content-cutoff"><a href="/admin/<%= posts[i]._id %>"><%= posts[i].content %></a></p>
-        <p><%= posts[i].post_date %></p>
+        <p><a id="<%= posts[i]._id %>" class="post-link post-title" href="/admin/<%= posts[i]._id %>"><%= posts[i].title %></a></p>
+        <p class="content-cutoff"><a class="post-link" href="/admin/<%= posts[i]._id %>"><%= posts[i].content %></a></p>
+        <p class="post-link">Created: <%= posts[i].post_date %></p>
       </div>
     <% } %>
   </div>
