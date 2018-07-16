@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Database ====================================
 
 Post = require('./models/Post');
-mongoose.connect('mongodb://localhost/dm');
+mongoose.connect('mongodb://JWillZ94:104280Jw@ds139331.mlab.com:39331/jamani-blog-posts');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', () => {
