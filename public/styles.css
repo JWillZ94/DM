@@ -257,6 +257,7 @@ body {
   grid-template-columns: 0.33fr 0.17fr 0.17fr 0.33fr;
   grid-template-rows: 0.5fr;
   grid-gap: 2rem;
+  grid-row-gap: 6rem;
   justify-content: space-around;
   text-align: center;
   background: #fff;
@@ -320,21 +321,69 @@ body {
 }
 
 .about-group-1 {
-  width: 80%;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 500px;
+  background: #f2f2f2;
+}
+
+.about-group-1 > p {
+  width: 60%;
 }
 
 .about-group-2 {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
 }
 
-.ag2-1 {
-
+.ag2-content {
+  width: 350px;
 }
 
 /* Services ===================================*/
 
+.services-title {
+  min-height: 200px;
+  background: #007399;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-group-1 {
+  min-height: 500px;
+  background: #33ccff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service {
+  text-align: center;
+  width: 200px;
+}
+
 /* Work ===================================*/
+
+.work-title {
+  min-height: 200px;
+  background: #99e6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-group {
+  min-height: 500px;
+  background: #33ccff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Blog =======================================*/
 
@@ -405,3 +454,19 @@ body {
 }
 
 /* Contact ===================================*/
+
+.contact-title {
+  min-height: 200px;
+  background: #99e6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-group {
+  min-height: 500px;
+  background: #33ccff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
