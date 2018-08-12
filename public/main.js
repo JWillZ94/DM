@@ -1,7 +1,26 @@
-// var searchInput = document.getElementById('search-input');
-// var searchIcon = document.getElementsByClassName('fa-search');
-var navSection = document.getElementsByClassName('nav-section');
+"use strict;"
 
+const slides = document.getElementsByClassName("slide");
+let currentSlide = slides[0];
+for (let slide of slides) {
+  slide === currentSlide
+    ? slide.style.display = "block"
+    : slide.style.display = "none";
+}
+
+const dots = document.getElementsByClassName("dot");
+let currentDot = dots[0];
+for (let dot of dots) {
+  dot === currentDot
+    ? dot.classList.add("active")
+    : dot.classList.remove("active");
+}
+
+// jQuery =======================================
+
+// const searchInput = document.getElementById('search-input');
+// const searchIcon = document.getElementsByClassName('fa-search');
+const navSection = document.getElementsByClassName('nav-section');
 
 $(document).ready(function() {
 

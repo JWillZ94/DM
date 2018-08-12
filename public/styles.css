@@ -212,22 +212,43 @@ body {
 
 /* Home ===================================*/
 
-#body-1 {
-  height: 500px;
+/* #body-1 {
+
+} */
+
+.slide {
+  min-height: 500px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: none;
 }
 
-.text-content {
-  margin: 0;
-  position: relative;
-  top: 50%;
-  left: 50%;
+.slideshow-text {
   text-align: center;
-  transform: translate(-50%, -50%);
   color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow-dots {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 2px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 #body-2 {
@@ -451,6 +472,10 @@ body {
 
 .post-title {
   font-size: 1.3em;
+}
+
+#post {
+  min-height: 600px;
 }
 
 /* Contact ===================================*/
