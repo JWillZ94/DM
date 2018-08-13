@@ -7,6 +7,18 @@ body {
   padding: 0 0 3rem 0;
 }
 
+.fade-in-from-top {
+
+}
+
+.fade-in-from-left {
+  display: block !important;
+}
+
+.fade-in-from-right {
+  display: block !important;
+}
+
 /* Contact Bar ===================================*/
 
 .contact-links {
@@ -257,6 +269,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 500px;
+}
+
+#body-2-content {
+  display: block;
+  position: relative;
+  top: -25px;
 }
 
 #body-3 {
