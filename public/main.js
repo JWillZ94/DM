@@ -1,19 +1,29 @@
 "use strict;"
 
+let slideIndex = 0;
 const slides = document.getElementsByClassName("slide");
-let currentSlide = slides[0];
-for (let slide of slides) {
-  slide === currentSlide
-    ? slide.style.display = "block"
-    : slide.style.display = "none";
+const dots = document.getElementsByClassName("dot");
+showSlides();
+
+for (i = 0; i < dots.length; i++) {
+  dots[i].addEventListener("click", function(e) {
+    slideIndex = e.target.id;
+  });
 }
 
-const dots = document.getElementsByClassName("dot");
-let currentDot = dots[0];
-for (let dot of dots) {
-  dot === currentDot
-    ? dot.classList.add("active")
-    : dot.classList.remove("active");
+function showSlides() {
+  let i;
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  dots[slideIndex].classList.add("active");
+  slides[slideIndex].style.display = "block";
+  slideIndex++;
+  if (slideIndex > slides.length - 1) slideIndex = 0;
+  setTimeout(showSlides, 3000);
 }
 
 // jQuery =======================================
