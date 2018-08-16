@@ -3,13 +3,8 @@
 let slideIndex = 0;
 const slides = document.getElementsByClassName("slide");
 const dots = document.getElementsByClassName("dot");
-showSlides();
 
-for (i = 0; i < dots.length; i++) {
-  dots[i].addEventListener("click", function(e) {
-    slideIndex = e.target.id;
-  });
-}
+showSlides();
 
 function showSlides() {
   let i;
@@ -24,6 +19,12 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length - 1) slideIndex = 0;
   setTimeout(showSlides, 3000);
+}
+
+for (i = 0; i < dots.length; i++) {
+  dots[i].addEventListener("click", function(e) {
+    slideIndex = e.target.id;
+  });
 }
 
 $(document).ready(function() {

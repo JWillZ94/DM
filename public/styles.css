@@ -28,6 +28,7 @@ body {
 .soc-media {
   display: flex;
   justify-content: space-around;
+  max-width: 350px;
 }
 
 .soc-media i {
@@ -233,19 +234,23 @@ body {
 }
 
 .slideshow-dots {
+  margin-top: 1rem;
   text-align: center;
 }
 
 #slide-1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  transition: opacity 1s;
 }
 
 #slide-2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  transition: opacity 1s;
 }
 
 #slide-3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  transition: opacity 1s;
 }
 
 .dot {
@@ -260,7 +265,7 @@ body {
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #007399;
 }
 
 #body-2 {
@@ -273,6 +278,16 @@ body {
 #body-2-content {
   position: relative;
   top: -25px;
+  text-align: center;
+}
+
+.fa-broadcast-tower {
+  color: #007399;
+  position: relative;
+  top: 200px;
+  right: 300px;
+  z-index: -1;
+  font-size: 7em;
 }
 
 #body-3 {
@@ -311,7 +326,6 @@ body {
   grid-template-columns: 0.33fr 0.17fr 0.17fr 0.33fr;
   grid-template-rows: 0.5fr;
   grid-gap: 2rem;
-  grid-row-gap: 6rem;
   justify-content: space-around;
   position: relative;
   right: -25px;
@@ -538,5 +552,13 @@ body {
   background: #33ccff;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+/* Footer =====================================*/
+
+#footer-content {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
