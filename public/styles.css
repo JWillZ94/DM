@@ -4,7 +4,6 @@ body {
   background: linear-gradient(to bottom right, #33ccff 0%, #99e6ff 100%);  /* #007399 */
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 0 3rem 0;
 }
 
 /* Contact Bar ===================================*/
@@ -273,12 +272,36 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 500px;
+  background-image: url('./assets/angle-double-up-solid.svg'), url('./assets/angle-double-up-solid.svg');
+  background-repeat: repeat;
+  background-size: 100px;
+  animation-name: body-2-animation;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes body-2-animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -400%;
+  }
 }
 
 #body-2-content {
   position: relative;
   top: -25px;
   text-align: center;
+}
+
+#vid-description {
+  color: #007399;
+}
+
+#vid {
+  margin: 1rem;
 }
 
 .fa-broadcast-tower {
@@ -557,8 +580,15 @@ body {
 
 /* Footer =====================================*/
 
+#footer {
+  background: #ccf;
+  min-height: 300px;
+}
+
 #footer-content {
   display: flex;
+  min-height: inherit;
+  margin: 0 2rem;
   justify-content: space-between;
   align-items: center;
 }
