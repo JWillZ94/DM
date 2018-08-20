@@ -1,9 +1,30 @@
 <% include partials/header %>
 <div class="services-content">
-  <div class="services-title">
-    <p>These are our services</p>
+  <div id="slideshow">
+    <div class="slideshow-container">
+      <div id="slide-1" class="slide">
+        <div class="slide-text">
+          <p>First Slide</p>
+        </div>
+      </div>
+      <div id="slide-2" class="slide">
+        <div class="slide-text">
+          <p>Second slide</p>
+        </div>
+      </div>
+      <div id="slide-3" class="slide">
+        <div class="slide-text">
+          <p>Third slide</p>
+        </div>
+      </div>
+    </div>
+    <div class="slideshow-dots">
+      <span class="dot" id="0"></span>
+      <span class="dot" id="1"></span>
+      <span class="dot" id="2"></span>
+    </div>
   </div>
-  <div class="services-group-1">
+  <div class="services-group-1" class="container">
     <div class="service">
       <i class="fas fa-mouse-pointer"></i>
       <p>SEO Optimization</p>
@@ -26,4 +47,5 @@
     </div>
   </div>
 </div>
+<script src="/services.js"></script>
 <% include partials/footer %>

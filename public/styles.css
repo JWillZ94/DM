@@ -6,6 +6,11 @@ body {
   background-size: cover;
 }
 
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
 /* Contact Bar ===================================*/
 
 .contact-links {
@@ -210,11 +215,9 @@ body {
   width: 100%;
 }
 
-/* Home ===================================*/
+/* Home ===============================================*/
 
-/* #body-1 {
-
-} */
+/* slideshow ================================== */
 
 .slide {
   min-height: 500px;
@@ -224,7 +227,7 @@ body {
   background-repeat: none;
 }
 
-.slideshow-text {
+.slide-text {
   text-align: center;
   color: #f2f2f2;
   display: flex;
@@ -267,32 +270,19 @@ body {
   background-color: #007399;
 }
 
-#body-2 {
+/* intro-vid ===============================================*/
+
+#intro-vid {
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 500px;
-  background-image: url('./assets/angle-double-up-solid.svg'), url('./assets/angle-double-up-solid.svg');
-  background-repeat: repeat;
-  background-size: 100px;
-  animation-name: body-2-animation;
-  animation-duration: 40s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
-@keyframes body-2-animation {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 -400%;
-  }
-}
-
-#body-2-content {
+#intro-vid-content {
   position: relative;
-  top: -25px;
+  /* top: -25px; */
   text-align: center;
 }
 
@@ -302,39 +292,36 @@ body {
 
 #vid {
   margin: 1rem;
+  box-shadow: 10px 10px 12px 5px #888;
 }
 
-.fa-broadcast-tower {
-  color: #007399;
-  position: relative;
-  top: 200px;
-  right: 300px;
-  z-index: -1;
-  font-size: 7em;
-}
+/* something else ==================*/
 
 #body-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background: #007399;
+  background: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-color: #007399;
   color: #fff;
   font-size: 1.3em;
   min-height: 500px;
 }
 
 #body-3-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
   justify-content: space-around;
   align-items: center;
   position: relative;
   left: -25px;
 }
 
-.sub-body-3 {
+/* .sub-body-3 {
   max-width: 500px;
-}
+} */
 
 #body-4 {
   text-align: center;
