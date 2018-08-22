@@ -13,6 +13,12 @@ $(document).ready(function() {
   //   $(searchInput).toggle('slide');
   // });
 
+  // Makes the post div a link to the article
+  $(".post").click(function () {
+    window.location = $(this).find("a").attr("href");
+    return false;
+  });
+
   // Position of the section
   const navpos = $('.nav-section').offset();
 

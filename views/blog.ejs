@@ -1,14 +1,23 @@
 <% include partials/header %>
 <div class="blog-content">
-  <p class="section-title">Blog</p>
+  <div id="blog-title">
+    <div id="blog-title-content" class="container">
+      <p class="section-title">JMan's Blog</p>
+      <small>Informational articles from the grandmaster himself</small>
+    </div>
+  </div>
   <div id="posts">
-    <% for (let i = 0; i < posts.length; i++) { %>
-      <div class="post" id="<%= posts[i]._id %>">
-        <p><a id="<%= posts[i]._id %>" class="post-link post-title" href="/blog/<%= posts[i]._id %>"><%= posts[i].title %></a></p>
-        <p class="content-cutoff"><a class="post-link" href="/blog/<%= posts[i]._id %>"><%= posts[i].content %></a></p>
-        <p class="post-link">Created: <%= posts[i].post_date %></p>
-      </div>
-    <% } %>
+    <div id="posts-content" class="container">
+      <% for (let i = 0; i < posts.length; i++) { %>
+        <div class="post" id="<%= posts[i]._id %>">
+          <a class="post-link" href="/blog/<%= posts[i]._id %>">
+            <p class="post-title"><%= posts[i].title %></p>
+            <p class="content-cutoff"><%= posts[i].content %></p>
+            <p>Created: <%= posts[i].post_date %></p>
+          </a>
+        </div>
+      <% } %>
+    </div>
   </div>
 </div>
 <% include partials/footer %>

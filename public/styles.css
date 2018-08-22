@@ -477,22 +477,34 @@ body {
 
 /* Blog =======================================*/
 
+#blog-title {
+  background: linear-gradient(rgba(153, 230, 255, 0.5), rgba(153, 230, 255, 0.5)), url("https://images.pexels.com/photos/261579/pexels-photo-261579.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center fixed;
+  min-height: 400px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-title {
   text-align: center;
   font-size: 2.5em;
 }
 
+#posts {
+  margin: 3rem 0;
+}
+
 .post {
-  border: 1px black solid;
-  background: #fff;
+  background: #007399;
   border-radius: 25px;
   padding: 2rem;
   width: 40%;
-  margin: 0 0 3rem 3rem;
+  cursor: pointer;
 }
 
 .post:hover {
-  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
 }
 
 .post-form {
@@ -519,15 +531,6 @@ body {
   margin-bottom: 3rem;
 }
 
-.title {
-  width: 600px;
-}
-
-#content {
-  max-width: 80%;
-  margin: auto;
-}
-
 .content-cutoff {
   white-space: nowrap;
   overflow: hidden;
@@ -536,15 +539,11 @@ body {
 
 .post-link {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 .post-title {
   font-size: 1.3em;
-}
-
-#post {
-  min-height: 600px;
 }
 
 /* Contact ===================================*/
@@ -568,14 +567,14 @@ body {
 /* Footer =====================================*/
 
 #footer {
-  background: #ccf;
+  background: linear-gradient(rgba(204, 204, 255, 0.9), rgba(204, 204, 255, 0.9)), url("https://images.pexels.com/photos/908290/pexels-photo-908290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-color: #ccf;
   min-height: 300px;
 }
 
 #footer-content {
   display: flex;
   min-height: inherit;
-  margin: 0 2rem;
   justify-content: space-between;
   align-items: center;
 }
