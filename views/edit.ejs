@@ -11,9 +11,9 @@
       <textarea name="content" wrap="hard" id="edit-content" cols="100" rows="20"><%= post.content %></textarea>
     </div>
     <div class="form-control">
-      <label for="last_updated">Last Date Updated: </label>
-      <input type="date" id="edit-last-updated" name="last_updated">
-      <!-- <%= post.last_update %> -->
+      <label for="last_update">Last Date Updated: </label>
+      <input type="date" id="edit-last-update" value="<%= post.last_update %>" name="last_update">
+      <!--  -->
     </div>
     <input class="btn" type="submit">
     <button id="<%= post._id %>" class="delete btn">Delete Post</button>

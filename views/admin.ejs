@@ -6,7 +6,11 @@
       <div class="post" id="<%= posts[i]._id %>">
         <p><a id="<%= posts[i]._id %>" class="post-link post-title" href="/admin/<%= posts[i]._id %>"><%= posts[i].title %></a></p>
         <p class="content-cutoff"><a class="post-link" href="/admin/<%= posts[i]._id %>"><%= posts[i].content %></a></p>
-        <p class="post-link">Created: <%= posts[i].post_date %></p>
+        <div class="post-link">
+          <span>Created: </span>
+          <span><%= moment(posts[i].post_date).format('MMMM Do YYYY') %></span>
+          <span>- <%= moment(posts[i].post_date).fromNow() %></span>
+        </div>
       </div>
     <% } %>
   </div>
@@ -19,6 +23,10 @@
     <div id="add-content" class="form-control">
       <label for="content">Content: </label>
       <textarea name="content" id="" cols="100" rows="20"></textarea>
+    </div>
+    <div id="add-video" class="form-control">
+      <label for="video_url">Video URL: </label>
+      <input type="text" name="video_url">
     </div>
     <div class="form-control">
       <label for="post_date">Date Created: </label>

@@ -3,8 +3,12 @@
   <div id="post">
     <p class="section-title"><%= post.title %></p>
     <div>
-      <p><%= post.post_date %></p>
-      <p><%= post.last_update %></p>
+      <span><%= moment(post.post_date).format('MMMM Do YYYY') %></span>
+      <span>- <%= moment(post.post_date).fromNow() %></span>
+    </div>
+    <div>
+      <span><%= moment(post.last_update).format('MMMM Do YYYY') %></span>
+      <span>- <%= moment(post.last_update).fromNow() %></span>
     </div>
     <p id="content"><%= post.content %></p>
   </div>

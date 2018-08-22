@@ -1,19 +1,26 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const moment = require('moment');
 Post = require('../models/Post');
 
 router.get('/', (req, res) => {
   Post.find({}, (err, posts) => {
     if (err) throw err;
-    res.render('blog', { posts: posts });
+    res.render('blog', {
+      posts: posts,
+      moment: moment
+    });
   });
 });
 
 router.get('/:id', (req, res) => {
   Post.findById(req.params.id, {}, (err, post) => {
     if (err) throw err;
-    res.render('post', { post: post });
+    res.render('post', {
+      post: post,
+      moment: moment
+    });
   });
 });
 

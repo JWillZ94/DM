@@ -9,12 +9,16 @@ const postSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  video_url: {
+    type: String,
+    required: false
+  },
   post_date: {
-    type: Date,
+    type: String,
     required: true
   },
   last_update: {
-    type: Date,
+    type: String,
     required: true
   }
 });

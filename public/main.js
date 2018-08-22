@@ -42,7 +42,7 @@ $(document).ready(function() {
       data: {
         title: $('#edit-title').val(),
         content: $('#edit-content').val(),
-        last_updated: $('#edit-last-updated').val()
+        last_update: $('#edit-last-update').val()
       }
     })
     .done((data) => {

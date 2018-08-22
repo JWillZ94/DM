@@ -13,7 +13,11 @@
           <a class="post-link" href="/blog/<%= posts[i]._id %>">
             <p class="post-title"><%= posts[i].title %></p>
             <p class="content-cutoff"><%= posts[i].content %></p>
-            <p>Created: <%= posts[i].post_date %></p>
+            <div>
+              <span>Created: </span>
+              <span><%= moment(posts[i].post_date).format('MMMM Do YYYY') %></span>
+              <span>- <%= moment(posts[i].post_date).fromNow() %></span>
+            </div>
           </a>
         </div>
       <% } %>

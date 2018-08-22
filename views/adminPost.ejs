@@ -3,8 +3,15 @@
   <div id="post">
     <h1><%= post.title %></h1>
     <p><%= post.content %></p>
-    <p><%= post.post_date %></p>
-    <p><%= post.last_update %></p>
+    <iframe src="<%= post.video_url %>" frameborder="0"></iframe>
+    <div>
+      <span><%= moment(post.post_date).format('MMMM Do YYYY') %></span>
+      <span>- <%= moment(post.post_date).fromNow() %></span>
+    </div>
+    <div>
+      <span><%= moment(post.last_update).format('MMMM Do YYYY') %></span>
+      <span>- <%= moment(post.last_update).fromNow() %></span>
+    </div>
     <a href="/admin/<%= post._id %>/edit">Edit Post</a>
   </div>
 </div>
