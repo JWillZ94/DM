@@ -501,7 +501,8 @@ body {
 }
 
 .post {
-  background: #007399;
+  /* background: #007399; */
+  background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/630839/pexels-photo-630839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   border-radius: 25px;
   padding: 2rem;
   width: 40%;

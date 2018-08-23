@@ -4,13 +4,15 @@
   <div id="posts">
     <% for (let i = 0; i < posts.length; i++) { %>
       <div class="post" id="<%= posts[i]._id %>">
-        <p><a id="<%= posts[i]._id %>" class="post-link post-title" href="/admin/<%= posts[i]._id %>"><%= posts[i].title %></a></p>
-        <p class="content-cutoff"><a class="post-link" href="/admin/<%= posts[i]._id %>"><%= posts[i].content %></a></p>
-        <div class="post-link">
-          <span>Created: </span>
-          <span><%= moment(posts[i].post_date).format('MMMM Do YYYY') %></span>
-          <span>- <%= moment(posts[i].post_date).fromNow() %></span>
-        </div>
+        <a class="post-link" href="/admin/<%= posts[i]._id %>">
+          <p class="post-title"><%= posts[i].title %></p>
+          <p class="content-cutoff"><%= posts[i].content %></p>
+          <div>
+            <span>Created: </span>
+            <span><%= moment(posts[i].post_date).format('MMMM Do YYYY') %></span>
+            <span>- <%= moment(posts[i].post_date).fromNow() %></span>
+          </div>
+        </a>
       </div>
     <% } %>
   </div>
