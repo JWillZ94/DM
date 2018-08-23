@@ -572,7 +572,8 @@ body {
 /* Footer =====================================*/
 
 #footer {
-  background: linear-gradient(rgba(204, 204, 255, 0.9), rgba(204, 204, 255, 0.9)), url("https://images.pexels.com/photos/908290/pexels-photo-908290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/908290/pexels-photo-908290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  /* 204, 204, 255, 0.9 */
   background-color: #ccf;
   min-height: 300px;
 }
