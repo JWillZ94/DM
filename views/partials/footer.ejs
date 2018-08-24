@@ -1,3 +1,43 @@
+  <div id="cta">
+    <div id="cta-content" class="container">
+      <p id="cta-title">Contact us now</p>
+      <form id="cta-form" action="http://localhost:3000/api/contact" method="post">
+        <div>
+          <label for="">Name: </label>
+          <input type="text" name="name" placeholder="Full Name*" required>
+        </div>
+        <div>
+          <label for="">Message: </label>
+          <textarea name="msg" id="" cols="30" rows="10" placeholder="Type message here...*" required></textarea>
+        </div>
+        <div>
+          <label for="">Email Address: </label>
+          <input type="email" name="email" placeholder="Email*" required>
+        </div>
+        <div>
+          <label for="">Phone Number: </label>
+          <input type="text" name="phone_number" placeholder="Phone Number">
+        </div>
+        <div>
+          <label for="">Best time to reach you: </label>
+          <select name="best_time" required>
+            <option value="early morning">Early Morning (6am - 8am)</option>
+            <option value="morning">Morning (8am - 12pm)</option>
+            <option value="noon">Noon (12pm - 3pm)</option>
+            <option value="afternoon">Afternoon (3pm - 6pm)</option>
+            <option value="night">Night (6pm - 9pm)</option>
+          </select>
+        </div>
+        <div>
+          <label for="">How did you hear of us: </label>
+          <input type="text" name="source" placeholder="Source*" required>
+        </div>
+        <div>
+          <input type="submit">
+        </div>
+      </form>
+    </div>
+  </div>
   <div id="footer">
     <div id="footer-content" class="container">
       <div class="soc-media">
