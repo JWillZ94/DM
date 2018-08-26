@@ -3,6 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
+const { google } = require('googleapis');
+const OAuth2 = google.auth.OAuth2;
 
 const app = express();
 
@@ -54,17 +56,39 @@ app.use('/blog', blog);
 let admin = require('./api/admin');
 app.use('/admin', admin);
 
+// OAuth2 ========================================
+
+const oauth2Client = new OAuth2(
+  "403214791414-p568br9loi404q570ioen4h4hem3ar9r.apps.googleusercontent.com",
+  "Dhc8L0PQeGcEToHK_Em4sAUr",
+  "https://developers.google.com/oauthplayground/"
+);
+
+oauth2Client.setCredentials({
+  refresh_token: "1/u5WTLQRpx53H0ZiANX_Nc6NuBXkBbPbtfrvHiG7Kezk"
+});
+
+let accessToken = '';
+
+oauth2Client.refreshAccessToken((err, tokens) => {
+  accessToken = tokens.access_token;
+});
+
 // NodeMailer ====================================
 
 app.post('/api/contact', (req, res) => {
 
   const transporter = nodemailer.createTransport({
-    secure: false,
-    service: 'gmail',
-    port: 25,
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
+      type: 'OAuth2',
       user: 'jerelwilliams94@gmail.com',
-      pass: '104280Jw'
+      clientId: '403214791414-p568br9loi404q570ioen4h4hem3ar9r.apps.googleusercontent.com',
+      clientSecret: 'Dhc8L0PQeGcEToHK_Em4sAUr',
+      refreshToken: '1/u5WTLQRpx53H0ZiANX_Nc6NuBXkBbPbtfrvHiG7Kezk',
+      accessToken: accessToken
     },
     tls: {
       rejectUnauthorized: false
@@ -73,13 +97,13 @@ app.post('/api/contact', (req, res) => {
 
   transporter.verify((err, success) => {
     return err
-      ? console.log("dis a verification error: " + err)
+      ? console.log("Dis a verification error: " + err)
       : console.log("server is ready to receive messages");
   });
 
   const mailOptions = {
-    from: req.body.name + " " + req.body.email,
-    to: 'jerelwilliams94@gmail.com',
+    from: req.body.name,
+    to: 'jamaniskeete43@gmail.com',
     subject: 'Message from the call to action on the main site',
     html: `
       <p>${req.body.name} (${req.body.email}) says:</p>
