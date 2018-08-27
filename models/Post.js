@@ -10,8 +10,10 @@ const postSchema = mongoose.Schema({
     required: true
   },
   video_url: {
-    type: String,
-    required: false
+    type: String
+  },
+  video_thumbnail: {
+    type: String
   },
   post_date: {
     type: String,

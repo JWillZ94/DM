@@ -1,34 +1,37 @@
 <% include partials/header %>
 <div class="admin-content">
   <p class="section-title">Admin Section</p>
-  <div id="posts">
-    <% for (let i = 0; i < posts.length; i++) { %>
-      <div class="post" id="<%= posts[i]._id %>">
-        <a class="post-link" href="/admin/<%= posts[i]._id %>">
-          <p class="post-title"><%= posts[i].title %></p>
-          <p class="content-cutoff"><%= posts[i].content %></p>
-          <div>
-            <span>Created: </span>
-            <span><%= moment(posts[i].post_date).format('MMMM Do YYYY') %></span>
-            <span>- <%= moment(posts[i].post_date).fromNow() %></span>
-          </div>
-        </a>
-      </div>
-    <% } %>
+  <div id="blog-posts">
+    <div id="blog-posts-content" class="container">
+      <% for (let i = 0; i < posts.length; i++) { %>
+        <div class="blog-post" id="<%= posts[i]._id %>">
+          <a class="blog-post-link" href="/admin/<%= posts[i]._id %>">
+            <p class="blog-post-title"><%= posts[i].title %></p>
+            <p class="content-cutoff"><%= posts[i].content %></p>
+            <div>
+              <span>Created: </span>
+              <span><%= moment(posts[i].post_date).format('MMMM Do YYYY') %></span>
+              <span>- <%= moment(posts[i].post_date).fromNow() %></span>
+            </div>
+          </a>
+        </div>
+      <% } %>
+    </div>
   </div>
   <p class="section-title">Create Blog Post</p>
   <form class="post-form" action="/blog" method="post">
     <div class="form-control">
-      <label for="title">Title: </label>
-      <input type="text" class="title" name="title">
+      <input type="text" class="input-box" name="title" placeholder="Title...">
     </div>
     <div id="add-content" class="form-control">
-      <label for="content">Content: </label>
-      <textarea name="content" id="" cols="100" rows="20"></textarea>
+      <textarea name="content" id="" cols="100" rows="20" placeholder="Content..."></textarea>
     </div>
     <div id="add-video" class="form-control">
-      <label for="video_url">Video URL: </label>
-      <input type="text" name="video_url">
+      <input type="text" class="input-box" name="video_url" placeholder="Video URL...">
+    </div>
+    <div id="add-video-thumbnail" class="form-control">
+      <label for="video_thumbnail">Video Thumbnail: </label>
+      <input type="text" name="video_thumbnail" placeholder="Video Thumbnail...">
     </div>
     <div class="form-control">
       <label for="post_date">Date Created: </label>

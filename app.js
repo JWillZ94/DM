@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
+info = require('./secret');
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Database ====================================
 
 Post = require('./models/Post');
-mongoose.connect('mongodb://JWillZ94:104280Jw@ds139331.mlab.com:39331/jamani-blog-posts');
+mongoose.connect(info.db);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', () => {
@@ -30,10 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.render('index');
-});
-
-app.get('/about', (req, res) => {
-  res.render('about');
 });
 
 app.get('/services', (req, res) => {
@@ -59,13 +56,13 @@ app.use('/admin', admin);
 // OAuth2 ========================================
 
 const oauth2Client = new OAuth2(
-  "403214791414-p568br9loi404q570ioen4h4hem3ar9r.apps.googleusercontent.com",
-  "Dhc8L0PQeGcEToHK_Em4sAUr",
+  info.clientId,
+  info.clientSecret,
   "https://developers.google.com/oauthplayground/"
 );
 
 oauth2Client.setCredentials({
-  refresh_token: "1/u5WTLQRpx53H0ZiANX_Nc6NuBXkBbPbtfrvHiG7Kezk"
+  refresh_token: info.refreshToken
 });
 
 let accessToken = '';
@@ -84,10 +81,10 @@ app.post('/api/contact', (req, res) => {
     secure: true,
     auth: {
       type: 'OAuth2',
-      user: 'jerelwilliams94@gmail.com',
-      clientId: '403214791414-p568br9loi404q570ioen4h4hem3ar9r.apps.googleusercontent.com',
-      clientSecret: 'Dhc8L0PQeGcEToHK_Em4sAUr',
-      refreshToken: '1/u5WTLQRpx53H0ZiANX_Nc6NuBXkBbPbtfrvHiG7Kezk',
+      user: info.user,
+      clientId: info.clientId,
+      clientSecret: info.clientSecret,
+      refreshToken: info.refreshToken,
       accessToken: accessToken
     },
     tls: {
@@ -97,13 +94,13 @@ app.post('/api/contact', (req, res) => {
 
   transporter.verify((err, success) => {
     return err
-      ? console.log("Dis a verification error: " + err)
-      : console.log("server is ready to receive messages");
+      ? console.log("There is a verification error: " + err)
+      : console.log("Server is ready to receive messages");
   });
 
   const mailOptions = {
     from: req.body.name,
-    to: 'jamaniskeete43@gmail.com',
+    to: info.to,
     subject: 'Message from the call to action on the main site',
     html: `
       <p>${req.body.name} (${req.body.email}) says:</p>

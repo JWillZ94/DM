@@ -1,17 +1,25 @@
 <% include partials/header %>
-<div class="post-content">
-  <div id="post">
-    <h1><%= post.title %></h1>
-    <p><%= post.content %></p>
-    <iframe src="<%= post.video_url %>" frameborder="0"></iframe>
-    <div>
+<div id="admin-post-content">
+  <div id="post" class="container">
+    <p class="post-title"><%= post.title %></p>
+    <div class="date">
+      <span>Created: </span>
       <span><%= moment(post.post_date).format('MMMM Do YYYY') %></span>
       <span>- <%= moment(post.post_date).fromNow() %></span>
     </div>
-    <div>
+    <div class="date">
+      <span>Last Updated: </span>
       <span><%= moment(post.last_update).format('MMMM Do YYYY') %></span>
       <span>- <%= moment(post.last_update).fromNow() %></span>
     </div>
+    <div id="intro-vid">
+      <div id="intro-vid-content">
+        <!-- <i class="fas fa-broadcast-tower"></i> -->
+        <!-- <p id="vid-description"></p> -->
+        <iframe id="vid" src="<%= post.video_url %>" frameborder="0" width="800" height="450"></iframe>
+      </div>
+    </div>
+    <p id="post-content"><%= post.content %></p>
     <a href="/admin/<%= post._id %>/edit">Edit Post</a>
   </div>
 </div>

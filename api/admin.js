@@ -19,7 +19,7 @@ router.get('/:id', (req, res) => {
     if (err) throw err;
     res.render('adminPost', {
       post: post,
-      moment: moment 
+      moment: moment
     });
   });
 });

@@ -11,6 +11,15 @@ body {
   margin: auto;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.input-box {
+  
+}
+
 /* Contact Bar ===================================*/
 
 .contact-links {
@@ -152,7 +161,7 @@ body {
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: #f2f2f2;
@@ -214,8 +223,6 @@ body {
   justify-content: space-around;
   width: 100%;
 }
-
-/* Home ===============================================*/
 
 /* slideshow ================================== */
 
@@ -370,68 +377,19 @@ body {
   font-size: 4em;
 }
 
-/* About ===================================*/
+/* About Us ===================================*/
 
-.about-title {
-  height: 400px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/630839/pexels-photo-630839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: none;
-}
-
-.about-title-content {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  transform: translate(-50%, -50%);
-  color: #f2f2f2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-}
-
-.about-group-1 {
+#about-us {
+  min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/630839/pexels-photo-630839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed center;
+}
+
+#about-us-content {
   text-align: center;
-  min-height: 500px;
-  background: #f2f2f2;
-}
-
-#ag1-content {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: -25px;
-}
-
-#ag1-content > p {
-  width: 60%;
-}
-
-.about-group-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 500px;
-}
-
-#ag2-content {
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  bottom: -25px;
-}
-
-#ag2-content > p {
-  width: 40%;
+  color: #007399;
 }
 
 /* Services ===================================*/
@@ -475,6 +433,30 @@ body {
   align-items: center;
 }
 
+/* Blog/Admin =================================*/
+
+.blog-post {
+  /* background: #007399; */
+  background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/630839/pexels-photo-630839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  border-radius: 25px;
+  padding: 2rem;
+  width: 40%;
+  cursor: pointer;
+}
+
+.blog-post:hover {
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
+}
+
+.blog-post-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.blog-post-title {
+  font-size: 1.3em;
+}
+
 /* Blog =======================================*/
 
 #blog-title {
@@ -486,32 +468,16 @@ body {
   align-items: center;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.5em;
-}
-
-#posts {
+#blog-posts {
   margin: 3rem 0;
 }
 
-#posts-content {
+#blog-posts-content {
   display: grid;
   grid-gap: 2rem;
 }
 
-.post {
-  /* background: #007399; */
-  background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/630839/pexels-photo-630839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  border-radius: 25px;
-  padding: 2rem;
-  width: 40%;
-  cursor: pointer;
-}
-
-.post:hover {
-  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
-}
+/* Admin ====================================*/
 
 .post-form {
   width: 60%;
@@ -543,13 +509,12 @@ body {
   text-overflow: ellipsis;
 }
 
-.post-link {
-  text-decoration: none;
-  color: #fff;
-}
+/* Post ===========================================*/
 
 .post-title {
-  font-size: 1.3em;
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
 }
 
 /* Contact ===================================*/
