@@ -12,14 +12,14 @@
       <span><%= moment(post.last_update).format('MMMM Do YYYY') %></span>
       <span>- <%= moment(post.last_update).fromNow() %></span>
     </div>
-    <div id="intro-vid">
-      <div id="intro-vid-content">
+    <div id="post-vid">
+      <div id="post-vid-content">
         <!-- <i class="fas fa-broadcast-tower"></i> -->
         <!-- <p id="vid-description"></p> -->
         <iframe id="vid" src="<%= post.video_url %>" frameborder="0" width="800" height="450"></iframe>
       </div>
     </div>
-    <p id="post-content"><%= post.content %></p>
+    <p id="post-content-text"><%= post.content %></p>
   </div>
 </div>
 <% include partials/footer %>

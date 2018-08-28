@@ -3,24 +3,21 @@
       <p id="cta-title">Contact us now</p>
       <form id="cta-form" action="http://localhost:3000/api/contact" method="post">
         <div>
-          <label for="">Name: </label>
-          <input type="text" name="name" placeholder="Full Name*" required>
+          <input type="text" class="input-box" name="name" placeholder="Full Name*" required>
         </div>
         <div>
-          <label for="">Message: </label>
-          <textarea name="msg" id="" cols="30" rows="10" placeholder="Type message here...*" required></textarea>
+          <textarea name="msg" class="input-box" id="" cols="30" rows="10" placeholder="Type message here...*" required></textarea>
         </div>
         <div>
-          <label for="">Email Address: </label>
-          <input type="email" name="email" placeholder="Email*" required>
+          <input type="email" class="input-box" name="email" placeholder="Email Address*" required>
         </div>
         <div>
-          <label for="">Phone Number: </label>
-          <input type="text" name="phone_number" placeholder="Phone Number">
+          <input type="text" class="input-box" name="phone_number" placeholder="Phone Number">
         </div>
-        <div>
-          <label for="">Best time to reach you: </label>
-          <select name="best_time" required>
+        <div id="cta-best-time">
+          <label for="best_time" class="label">Best time to reach you: </label>
+          <select name="best_time" class="input-box-small" required>
+            <option disabled selected value> -- select an option -- </option>
             <option value="early morning">Early Morning (6am - 8am)</option>
             <option value="morning">Morning (8am - 12pm)</option>
             <option value="noon">Noon (12pm - 3pm)</option>
@@ -28,12 +25,12 @@
             <option value="night">Night (6pm - 9pm)</option>
           </select>
         </div>
-        <div>
-          <label for="">How did you hear of us: </label>
-          <input type="text" name="source" placeholder="Source*" required>
+        <div id="cta-source">
+          <label for="source" class="label">How did you hear of us: </label>
+          <input type="text" class="input-box-small" name="source" placeholder="Source*" required>
         </div>
         <div>
-          <input type="submit">
+          <input type="submit" class="btn">
         </div>
       </form>
     </div>
