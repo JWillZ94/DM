@@ -485,14 +485,13 @@ body {
 }
 
 .blog-post {
-  /* background: #007399; */
-  /* background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/630839/pexels-photo-630839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
   border-radius: 25px;
   padding: 2rem;
   width: 300px;
   height: 300px;
   cursor: pointer;
   margin: auto;
+  position: relative;
 }
 
 .blog-post:hover {
@@ -511,7 +510,7 @@ body {
 .blog-vid-thumbnail {
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 2;
 }
 
 /* Blog =======================================*/

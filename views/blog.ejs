@@ -9,8 +9,7 @@
   <div id="blog-posts">
     <div id="blog-posts-content" class="container">
       <% for (let i = 0; i < posts.length; i++) { %>
-        <div class="blog-post" id="<%= posts[i]._id %>">
-          <img class="blog-vid-thumbnail" src="<%= posts[i].video_thumbnail %>" alt="No Thumbnail Yet">
+        <div class="blog-post" id="<%= posts[i]._id %>" style="background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url(<%= posts[i].video_thumbnail %>)">
           <a class="blog-post-link" href="/blog/<%= posts[i]._id %>">
             <p class="blog-post-title"><%= posts[i].title %></p>
             <p class="content-cutoff"><%= posts[i].content %></p>
@@ -25,4 +24,5 @@
     </div>
   </div>
 </div>
+<script src="/blog.js"></script>
 <% include partials/footer %>
