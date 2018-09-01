@@ -434,6 +434,8 @@ body {
 #about-us-content {
   text-align: center;
   color: #007399;
+  width: 60%;
+  line-height: 1.5rem;
 }
 
 /* Services ===================================*/
