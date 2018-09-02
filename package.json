@@ -23,6 +23,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "*",
+    "dotenv": "^6.0.0",
     "ejs": "*",
     "express": "*",
     "googleapis": "^33.0.0",

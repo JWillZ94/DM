@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -5,7 +6,6 @@ const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
-info = require('./secret');
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Database ====================================
 
 Post = require('./models/Post');
-mongoose.connect(info.db);
+mongoose.connect(process.env.JMAN_DB);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', () => {
@@ -56,13 +56,13 @@ app.use('/admin', admin);
 // OAuth2 ========================================
 
 const oauth2Client = new OAuth2(
-  info.clientId,
-  info.clientSecret,
+  process.env.JMAN_CLIENT_ID,
+  process.env.JMAN_CLIENT_SECRET,
   "https://developers.google.com/oauthplayground/"
 );
 
 oauth2Client.setCredentials({
-  refresh_token: info.refreshToken
+  refresh_token: process.env.JMAN_REFRESH_TOKEN
 });
 
 let accessToken = '';
@@ -81,10 +81,10 @@ app.post('/api/contact', (req, res) => {
     secure: true,
     auth: {
       type: 'OAuth2',
-      user: info.user,
-      clientId: info.clientId,
-      clientSecret: info.clientSecret,
-      refreshToken: info.refreshToken,
+      user: process.env.JMAN_USER,
+      clientId: process.env.JMAN_CLIENT_ID,
+      clientSecret: process.env.JMAN_CLIENT_SECRET,
+      refreshToken: process.env.JMAN_REFRESH_TOKEN,
       accessToken: accessToken
     },
     tls: {
@@ -100,7 +100,7 @@ app.post('/api/contact', (req, res) => {
 
   const mailOptions = {
     from: req.body.name,
-    to: info.to,
+    to: process.env.JMAN_TO,
     subject: 'Message from the call to action on the main site',
     html: `
       <p>${req.body.name} (${req.body.email}) says:</p>
