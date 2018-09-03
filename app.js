@@ -117,7 +117,7 @@ app.post('/api/contact', (req, res) => {
       : console.log("Email sent: " + info.response);
   });
 
-  res.render("index");
+  res.redirect("https://jamani-site.herokuapp.com/");
 
 });
 
