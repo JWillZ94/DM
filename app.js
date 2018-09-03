@@ -117,7 +117,7 @@ app.post('/api/contact', (req, res) => {
       : console.log("Email sent: " + info.response);
   });
 
-  res.redirect("/");
+  res.render("index");
 
 });
 
