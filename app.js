@@ -6,6 +6,9 @@ const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const session = require('express-session');
 
 const app = express();
 
@@ -13,6 +16,14 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(session({
+  secret: 'pst',
+  cookie: { secure: true },
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Database ====================================
 
@@ -119,6 +130,50 @@ app.post('/api/contact', (req, res) => {
 
   res.redirect("https://jamani-site.herokuapp.com/");
 
+});
+
+// Passport ======================================
+User = require('./models/User');
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    User.findOne({ username: username }, function(err, user) {
+      if (err) return done(err);
+      if (!user) {
+        console.log('Incorrect username.');
+        return done(null, false);
+      }
+      if (password !== user.password) {
+        console.log('Incorrect password.');
+        return done(null, false);
+      }
+      return done(null, user);
+    });
+  }
+));
+
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+  console.log("Logging in user: ", user.username);
+});
+
+passport.deserializeUser((id, done) => {
+  User.findById(id, (err, user) => done(err, user));
+  console.log("Logging out user by id: " + id);
+});
+
+app.post("/api/login", passport.authenticate('local'), (req, res) => {
+  res.redirect("/admin");
+});
+
+app.get("/api/logout", (req, res) => {
+  req.logout();
+  req.session.destroy(err => {
+    return err
+      ? console.log("Trouble logging out of session")
+      : console.log("Logged out of session successfully");
+  });
+  res.redirect("/admin");
 });
 
 // Server ========================================

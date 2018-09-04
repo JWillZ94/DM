@@ -4,7 +4,14 @@ const mongoose = require('mongoose');
 const moment = require('moment');
 Post = require('../models/Post');
 
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
+  console.log(req.user);
+  if (req.user) {
+    next();
+  } else {
+    res.render('login');
+  }
+}, (req, res) => {
   Post.find({}, (err, posts) => {
     if (err) throw err;
     res.render('admin', {

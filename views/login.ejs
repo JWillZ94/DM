@@ -1,0 +1,15 @@
+<% include partials/header %>
+<div id="login-content">
+  <form action="/api/login" method="POST">
+    <div>
+      <input type="text" class="input-box" name="username" placeholder="Username...*">
+    </div>
+    <div>
+      <input type="password" class="input-box" name="password" placeholder="Password...*">
+    </div>
+    <div>
+      <input type="submit" class="btn" value="Log In">
+    </div>
+  </form>
+</div>
+<% include partials/footer %>
