@@ -42,6 +42,8 @@ $(document).ready(function() {
       data: {
         title: $('#edit-title').val(),
         content: $('#edit-content').val(),
+        video_url: $('#edit-video_url').val(),
+        video_thumbnail: $('#edit-video_thumbnail').val(),
         last_update: $('#edit-last-update').val()
       }
     })

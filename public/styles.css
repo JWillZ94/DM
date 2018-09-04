@@ -561,8 +561,14 @@ body {
 }
 
 .delete {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  background: red;
+}
+
+.delete:hover {
+  background: #fff;
+  color: red;
 }
 
 .content-cutoff {

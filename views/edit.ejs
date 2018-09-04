@@ -4,19 +4,19 @@
   <form enctype="multipart/form-data" action="/admin" class="update-form post-form" id="<%= post._id %>" method="get">
     <div class="form-control">
       <label for="title">Title: </label>
-      <input type="text" id="edit-title" class="title" value="<%= post.title %>" name="title">
+      <input type="text" id="edit-title" class="title input-box" value="<%= post.title %>" name="title">
     </div>
     <div id="add-content" class="form-control">
       <label for="content">Content: </label>
-      <textarea name="content" wrap="hard" id="edit-content" cols="100" rows="20"><%= post.content %></textarea>
+      <textarea name="content" wrap="hard" id="edit-content" class="input-box" cols="100" rows="20"><%= post.content %></textarea>
     </div>
     <div class="form-control">
       <label for="video_url">Video URL</label>
-      <input type="text" id="edit-video_url" class="title" value="<%= post.video_url %>" name="video_url">
+      <input type="text" id="edit-video_url" class="title input-box" value="<%= post.video_url %>" name="video_url">
     </div>
     <div class="form-control">
       <label for="video_thumbnail">Video Thumbnail</label>
-      <input type="text" id="edit-video_thumbnail" class="title" value="<%= post.video_thumbnail %>" name="video_thumbnail">
+      <input type="text" id="edit-video_thumbnail" class="title input-box" value="<%= post.video_thumbnail %>" name="video_thumbnail">
     </div>
     <div class="form-control">
       <label for="last_update">Last Date Updated: </label>
