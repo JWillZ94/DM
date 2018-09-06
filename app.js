@@ -164,7 +164,7 @@ passport.deserializeUser((id, done) => {
 app.post("/api/login", passport.authenticate('local'), (req, res) => {
   res
     .json(res.user)
-    .redirect("/admin");
+    .redirect("https://jamani-site.herokuapp.com/admin");
 });
 
 app.get("/api/logout", (req, res) => {
@@ -174,7 +174,7 @@ app.get("/api/logout", (req, res) => {
       ? console.log("Trouble logging out of session")
       : console.log("Logged out of session successfully");
   });
-  res.redirect("/admin");
+  res.redirect("https://jamani-site.herokuapp.com/admin");
 });
 
 // Server ========================================
