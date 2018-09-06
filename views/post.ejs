@@ -4,13 +4,13 @@
     <p class="post-title"><%= post.title %></p>
     <div class="date">
       <span>Created: </span>
-      <span><%= moment(post.post_date).format('MMMM Do YYYY') %></span>
-      <span>- <%= moment(post.post_date).fromNow() %></span>
+      <span><%= moment(post.post_date, 'YYYY-MM-DD').format('MMMM Do YYYY') %></span>
+      <span>- <%= moment(post.post_date, 'YYYY-MM-DD').fromNow() %></span>
     </div>
     <div class="date">
       <span>Last Updated: </span>
-      <span><%= moment(post.last_update).format('MMMM Do YYYY') %></span>
-      <span>- <%= moment(post.last_update).fromNow() %></span>
+      <span><%= moment(post.last_update, 'YYYY-MM-DD').format('MMMM Do YYYY') %></span>
+      <span>- <%= moment(post.last_update, 'YYYY-MM-DD').fromNow() %></span>
     </div>
     <div id="post-vid">
       <div id="post-vid-content">

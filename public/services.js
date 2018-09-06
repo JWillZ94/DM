@@ -26,3 +26,24 @@ for (i = 0; i < dots.length; i++) {
     slideIndex = e.target.id;
   });
 }
+
+$(document).ready(function() {
+
+  const body4pos = $('#body-4').offset();
+
+  $('#body-4-content').animate({ opacity: 0 }, 0);
+
+  // Scroll function
+  $(window).bind('scroll', function() {
+
+    if ($(window).scrollTop() > body4pos.top - 300) {
+      $('#body-4-content')
+        .animate({
+          opacity: 1,
+          right: "0px"
+        }, 2000);
+    }
+
+  });
+
+});

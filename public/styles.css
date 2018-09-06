@@ -661,6 +661,10 @@ body {
   padding-right: 1rem;
 }
 
+#copyright-address {
+  color: #fff;
+}
+
 /* Login ======================================*/
 
 #login-content {

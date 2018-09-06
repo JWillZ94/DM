@@ -15,8 +15,8 @@
             <p class="content-cutoff"><%= posts[i].content %></p>
             <div>
               <span>Created: </span>
-              <span><%= moment(posts[i].post_date).format('MMMM Do YYYY') %></span>
-              <span>- <%= moment(posts[i].post_date).fromNow() %></span>
+              <span><%= moment(posts[i].post_date, 'YYYY-MM-DD').format('MMMM Do YYYY') %></span>
+              <span>- <%= moment(posts[i].post_date, 'YYYY-MM-DD').fromNow() %></span>
             </div>
           </a>
         </div>
