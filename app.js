@@ -14,13 +14,13 @@ const app = express();
 
 // Middleware ==================================
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
-  secret: 'pst',
-  cookie: { secure: true },
-  resave: false,
-  saveUninitialized: true
+  secret: 'pssssst',
+  resave: true,
+  saveUninitialized: false
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -38,7 +38,6 @@ db.once('open', () => {
 // Routes ======================================
 
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.render('index');
@@ -154,7 +153,7 @@ passport.use(new LocalStrategy(
 
 passport.serializeUser((user, done) => {
   done(null, user.id);
-  console.log("Logging in user: ", user.username);
+  console.log("Logging in user:", user.username);
 });
 
 passport.deserializeUser((id, done) => {
@@ -163,7 +162,9 @@ passport.deserializeUser((id, done) => {
 });
 
 app.post("/api/login", passport.authenticate('local'), (req, res) => {
-  res.redirect("/admin");
+  res
+    .json(res.user)
+    .redirect("/admin");
 });
 
 app.get("/api/logout", (req, res) => {

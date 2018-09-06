@@ -5,7 +5,6 @@ const moment = require('moment');
 Post = require('../models/Post');
 
 router.get('/', (req, res, next) => {
-  console.log(req.user);
   if (req.user) {
     next();
   } else {

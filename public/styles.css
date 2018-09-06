@@ -661,6 +661,26 @@ body {
   padding-right: 1rem;
 }
 
+/* Login ======================================*/
+
+#login-content {
+  text-align: center;
+  margin: 8rem 0;
+}
+
+#login-title {
+  font-size: 2em;
+  color: #fff;
+}
+
+.login-field {
+  margin-bottom: 1rem;
+}
+
+#login-btn {
+  margin-top: 2rem;
+}
+
 /* Footer =====================================*/
 
 #footer {
