@@ -162,9 +162,7 @@ passport.deserializeUser((id, done) => {
 });
 
 app.post("/api/login", passport.authenticate('local'), (req, res) => {
-  res
-    .json(res.user)
-    .redirect("https://jamani-site.herokuapp.com/admin");
+  res.redirect("https://jamani-site.herokuapp.com/admin");
 });
 
 app.get("/api/logout", (req, res) => {
