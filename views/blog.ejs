@@ -3,7 +3,7 @@
   <div id="blog-title">
     <div id="blog-title-content" class="container">
       <p class="section-title">Jamani Skeete's Blog</p>
-      <small>Informational articles from the grandmaster himself</small>
+      <p>Informational articles describing digital marketing industry-backed advice</p>
     </div>
   </div>
   <div id="blog-posts">
@@ -11,9 +11,9 @@
       <% for (let i = 0; i < posts.length; i++) { %>
         <div class="blog-post" id="<%= posts[i]._id %>" style="background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url(<%= posts[i].video_thumbnail %>)">
           <a class="blog-post-link" href="/blog/<%= posts[i]._id %>">
-            <p class="blog-post-title"><%= posts[i].title %></p>
-            <p class="content-cutoff"><%= posts[i].content %></p>
-            <div>
+            <p class="blog-post-title blog-link"><%= posts[i].title %></p>
+            <p class="content-cutoff blog-link"><%= posts[i].content %></p>
+            <div class="blog-link">
               <span>Created: </span>
               <span><%= moment(posts[i].post_date, 'YYYY-MM-DD').format('MMMM Do YYYY') %></span>
               <span>- <%= moment(posts[i].post_date, 'YYYY-MM-DD').fromNow() %></span>
@@ -24,5 +24,5 @@
     </div>
   </div>
 </div>
-<!-- <script src="/blog.js"></script> -->
+<script src="/blog.js"></script>
 <% include partials/footer %>

@@ -266,13 +266,15 @@ body {
 
 .slide {
   min-height: 500px;
-  display: none;
+  display: mone;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: none;
 }
 
 .slide-text {
+  min-height: 500px;
+  font-size: 1.5em;
   text-align: center;
   color: #f2f2f2;
   display: flex;
@@ -281,23 +283,37 @@ body {
 }
 
 .slideshow-dots {
-  margin-top: 1rem;
+  margin: 1rem 0;
   text-align: center;
 }
 
 #slide-1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  transition: opacity 1s;
+  background-image: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-color: #007399;
 }
 
 #slide-2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  transition: opacity 1s;
+  background-image: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-color: #007399;
 }
 
 #slide-3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  transition: opacity 1s;
+  background-image: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-color: #007399;
+}
+
+.fade-slide {
+  animation-name: fade-slide;
+  animation-duration: 3s;
+}
+
+@keyframes fade-slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .dot {
@@ -377,7 +393,7 @@ body {
 #body-4 {
   text-align: center;
   background: #fff;
-  font-size: 1.3em;
+  /* font-size: 1em; */
   padding: 2rem;
   min-height: 500px;
 }
@@ -421,6 +437,10 @@ body {
   font-size: 4em;
 }
 
+.service-title {
+  font-size: 1.3em;
+}
+
 /* About Us ===================================*/
 
 #about-us {
@@ -436,6 +456,7 @@ body {
   color: #007399;
   width: 60%;
   line-height: 1.5rem;
+  margin: 1rem 0;
 }
 
 /* Services ===================================*/
@@ -494,15 +515,16 @@ body {
   cursor: pointer;
   margin: auto;
   position: relative;
-}
-
-.blog-post:hover {
-  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
+  bottom: -25px;
 }
 
 .blog-post-link {
   text-decoration: none;
   color: #fff;
+}
+
+.blog-post:hover {
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
 }
 
 .blog-post-title {
@@ -640,6 +662,8 @@ body {
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  position: relative;
+  top: -25px;
 }
 
 #cta-form {
@@ -653,6 +677,10 @@ body {
 
 #cta-source {
   margin: auto;
+}
+
+#cta-btn {
+  margin-bottom: 3rem;
 }
 
 .label {

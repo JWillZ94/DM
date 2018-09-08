@@ -10,15 +10,17 @@ function showSlides() {
   let i;
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    slides[i].className = slides[i].className.replace(" fade-slide", "");
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   dots[slideIndex].classList.add("active");
   slides[slideIndex].style.display = "block";
+  slides[slideIndex].classList.add("fade-slide");
   slideIndex++;
   if (slideIndex > slides.length - 1) slideIndex = 0;
-  setTimeout(showSlides, 3000);
+  setTimeout(showSlides, 10000);
 }
 
 for (i = 0; i < dots.length; i++) {
@@ -36,7 +38,7 @@ $(document).ready(function() {
   // Scroll function
   $(window).bind('scroll', function() {
 
-    if ($(window).scrollTop() > body4pos.top - 300) {
+    if ($(window).scrollTop() > body4pos.top - 400) {
       $('#body-4-content')
         .animate({
           opacity: 1,

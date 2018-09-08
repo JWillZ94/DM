@@ -67,4 +67,23 @@ $(document).ready(function() {
     });
   });
 
+
+  const ctaPos = $('#cta').offset();
+
+  // Animation to make the content hidden
+  $('#cta-content').animate({ opacity: 0 }, 0);
+
+  // Scroll function
+  $(window).bind('scroll', function() {
+
+    if ($(window).scrollTop() > ctaPos.top - 400) {
+      $('#cta-content')
+        .animate({
+          opacity: 1,
+          top: "0px"
+        }, 2000);
+    }
+
+  });
+
 });

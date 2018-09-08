@@ -13,7 +13,7 @@ $(document).ready(function() {
   $(window).bind('scroll', function() {
 
     // From left
-    if ($(window).scrollTop() > body3pos.top - 300) {
+    if ($(window).scrollTop() > body3pos.top - 400) {
       $('#body-3-content')
         .animate({
           opacity: 1,
@@ -22,5 +22,8 @@ $(document).ready(function() {
     }
 
   });
+
+  $('#vid').animate({ opacity: 0 }, 0);
+  $('#vid').animate({ opacity: 1 }, 2000);
 
 });
