@@ -178,11 +178,13 @@ body {
 
 .nav-bar ul {
   display: flex;
+  padding: 0;
 }
 
 .nav-bar li {
   list-style: none;
-  padding-right: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .nav-link {
@@ -289,16 +291,19 @@ body {
 
 #slide-1 {
   background-image: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center;
   background-color: #007399;
 }
 
 #slide-2 {
   background-image: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center;
   background-color: #007399;
 }
 
 #slide-3 {
   background-image: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center;
   background-color: #007399;
 }
 
@@ -338,12 +343,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 500px;
+  height: 500px;
 }
 
 #intro-vid-content {
   position: relative;
-  /* top: -25px; */
   text-align: center;
 }
 
@@ -352,6 +356,8 @@ body {
 }
 
 #vid {
+  width: 800px;
+  height: 450px;
   margin: 3rem;
   box-shadow: 10px 10px 12px 5px rgba(0, 0, 0, 0.2);
 }
@@ -384,6 +390,10 @@ body {
   align-items: center;
   position: relative;
   left: -25px;
+}
+
+.sub-body-3-title {
+  font-size: 1.3em;
 }
 
 /* .sub-body-3 {
@@ -727,4 +737,232 @@ body {
   min-height: inherit;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Responsiveness ==================================*/
+
+@media (max-width: 1100px) {
+  #vid {
+    width: 600px;
+    height: 337.5px;
+  }
+}
+
+@media (max-width: 950px) {
+  #blog-posts-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog-post {
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 850px) {
+  #vid {
+    width: 500px;
+    height: 281.25px;
+  }
+
+  .contact-links {
+    justify-content: space-around;
+    margin: auto;
+  }
+
+  #phone {
+    padding: 0;
+  }
+
+  #body-4-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-body-4 {
+    margin: 1rem 0;
+  }
+
+  .post-form {
+    width: 600px;
+  }
+
+  .form-control {
+    width: 600px;
+  }
+
+}
+
+@media (max-width: 730px) {
+  #vid {
+    width: 450px;
+    height: 253.125px;
+  }
+
+  #head-title {
+    font-size: 2.5em;
+  }
+
+  .label {
+    font-size: 1.2em;
+  }
+
+  #body-3-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 675px) {
+  #vid {
+    width: 400px;
+    height: 225px;
+  }
+
+  .input-box {
+    width: 500px;
+    font-size: 1.1em;
+  }
+
+  #intro-vid {
+    height: 400px;
+  }
+
+  #about-us-content > p {
+    font-size: 0.8em;
+  }
+
+  #cta-best-time {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #cta-source {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-form {
+    width: 500px;
+  }
+
+  .form-control {
+    width: 500px;
+  }
+}
+
+@media (max-width: 575px) {
+  #vid {
+    width: 350px;
+    height: 196.875px;
+  }
+
+  #body-3 {
+    font-size: 1.1em;
+  }
+
+  .input-box {
+    width: 400px;
+    font-size: 1em;
+  }
+
+  .label {
+    font-size: 1.1em;
+  }
+
+  #footer-content {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 525px) {
+  #vid {
+    width: 300px;
+    height: 168.75px;
+  }
+
+  .post-form {
+    width: 400px;
+  }
+
+  .form-control {
+    width: 400px;
+  }
+}
+
+@media (max-width: 475px) {
+  .contact-links {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 460px) {
+  #vid {
+    width: 250px;
+    height: 140.625px;
+  }
+
+  .input-box {
+    width: 300px;
+    font-size: 0.8em;
+  }
+
+  .nav-section {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  #intro-vid {
+    height : 300px;
+  }
+
+  .blog-post {
+    width: 250px;
+    height: 250px;
+  }
+
+  .post-form > .input-box {
+    width: 300px;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    max-width: 90%;
+  }
+
+  #vid {
+    width: 200px;
+    height: 112.5px;
+  }
+
+  .input-box {
+    width: 300px;
+    font-size: 0.8em;
+  }
+
+  #intro-vid {
+    height : 200px;
+  }
+
+  .post-form {
+    width: 300px;
+  }
+
+  .form-control {
+    width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .input-box {
+    width: 250px;
+  }
+
+  .blog-post {
+    width: 200px;
+    height: 200px;
+  }
 }
