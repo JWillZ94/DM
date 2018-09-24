@@ -1,15 +1,4 @@
-body {
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
-  background: linear-gradient(to bottom right, #33ccff 0%, #99e6ff 100%);  /* #007399 */
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.container {
-  max-width: 80%;
-  margin: auto;
-}
+/* General =============================== */
 
 .section-title {
   text-align: center;
@@ -59,35 +48,6 @@ body {
 }
 
 /* Contact Bar ===================================*/
-
-.contact-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 1rem 3rem 2rem 0;
-}
-
-#phone {
-  color: #f2f2f2;
-  padding-right: 1rem;
-}
-
-#create-last-updated {
-  display: none;
-}
-
-.soc-media {
-  display: flex;
-  justify-content: space-around;
-  max-width: 350px;
-}
-
-.soc-media i {
-  color: #f2f2f2;
-  padding: 0.7rem;
-  margin: 0.5rem;
-  border-radius: 5px;
-}
 
 @keyframes facebook-hover {
   to {
@@ -170,33 +130,6 @@ body {
 
 /* Nav Bar ===================================*/
 
-.nav-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.nav-bar ul {
-  display: flex;
-  padding: 0;
-}
-
-.nav-bar li {
-  list-style: none;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.nav-link {
-  position: relative;
-  color: #f2f2f2;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: #f2f2f2;
-}
-
 .nav-link:before {
   content: '';
   position: absolute;
@@ -266,33 +199,9 @@ body {
 
 /* slideshow ================================== */
 
-.slide {
-  min-height: 500px;
-  display: mone;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: none;
-}
-
-.slide-text {
-  min-height: 500px;
-  font-size: 1.5em;
-  text-align: center;
-  color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .slideshow-dots {
   margin: 1rem 0;
   text-align: center;
-}
-
-#slide-1 {
-  background-image: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-position: center;
-  background-color: #007399;
 }
 
 #slide-2 {
@@ -338,44 +247,22 @@ body {
 
 /* intro-vid ===============================================*/
 
-#intro-vid {
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-}
-
-#intro-vid-content {
-  position: relative;
-  text-align: center;
+#vid {
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.3);
 }
 
 #vid-description {
   color: #007399;
 }
 
-#vid {
-  width: 800px;
-  height: 450px;
-  margin: 3rem;
-  box-shadow: 10px 10px 12px 5px rgba(0, 0, 0, 0.2);
-}
-
 /* something else ==================*/
-
-#head-title {
-  font-size: 3em;
-  text-align: center;
-  color: #fff;
-}
 
 #body-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  /* background: linear-gradient(rgba(0, 115, 153, 0.7), rgba(0, 115, 153, 0.7)), url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
   background-color: #007399;
   color: #fff;
   font-size: 1.3em;
@@ -458,7 +345,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/630839/pexels-photo-630839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed center;
+  /* background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/630839/pexels-photo-630839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed center; */
+  background-color: #99e6ff;
 }
 
 #about-us-content {
@@ -471,7 +359,7 @@ body {
 
 /* Services ===================================*/
 
-.services-title {
+/* .services-title {
   min-height: 200px;
   background: #007399;
   display: flex;
@@ -490,7 +378,7 @@ body {
 .service {
   text-align: center;
   width: 200px;
-}
+} */
 
 /* Work ===================================*/
 
@@ -549,19 +437,6 @@ body {
 
 /* Blog =======================================*/
 
-#blog-title-content {
-  text-align: center;
-}
-
-#blog-title {
-  background: linear-gradient(rgba(153, 230, 255, 0.5), rgba(153, 230, 255, 0.5)), url("https://images.pexels.com/photos/261579/pexels-photo-261579.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center fixed;
-  min-height: 400px;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #blog-posts {
   margin: 3rem 0;
 }
@@ -611,12 +486,6 @@ body {
 
 /* Post ===========================================*/
 
-.post-title {
-  text-align: center;
-  font-size: 2em;
-  color: #fff;
-}
-
 #post-content-text {
   color: #fff;
   font-size: 1.2em;
@@ -634,11 +503,6 @@ body {
 #post-vid-content {
   position: relative;
   text-align: center;
-}
-
-.date {
-  margin-bottom: 1rem;
-  color: #fff;
 }
 
 /* Contact ===================================*/
@@ -705,30 +569,14 @@ body {
 
 /* Login ======================================*/
 
-#login-content {
-  text-align: center;
-  margin: 8rem 0;
-}
-
-#login-title {
-  font-size: 2em;
-  color: #fff;
-}
-
-.login-field {
-  margin-bottom: 1rem;
-}
-
-#login-btn {
-  margin-top: 2rem;
-}
+/* Inline */
 
 /* Footer =====================================*/
 
 #footer {
-  background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/908290/pexels-photo-908290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  /* background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url("https://images.pexels.com/photos/908290/pexels-photo-908290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
   /* 204, 204, 255, 0.9 */
-  background-color: #ccf;
+  background-color: #007399;
   min-height: 300px;
 }
 
