@@ -248,7 +248,7 @@
 /* intro-vid ===============================================*/
 
 #vid {
-  
+
 }
 
 #vid-description {
@@ -585,6 +585,88 @@
   min-height: inherit;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Art =======================================*/
+
+#soc-art {
+  position: absolute;
+  float: left;
+  top: 250px;
+  left: 150px;
+}
+
+#soc-1 {
+  position: relative;
+  font-size: 0.3em;
+}
+
+#soc-2 {
+  position: relative;
+  font-size: 0.4em;
+  bottom: 5px;
+}
+
+#soc-3 {
+  position: relative;
+  font-size: 0.5em;
+  top: 5px;
+}
+
+#soc-4 {
+  position: relative;
+  font-size: 0.7em;
+  bottom: 10px;
+}
+
+#soc-5 {
+  position: relative;
+  font-size: 0.8em;
+  top: 10px;
+}
+
+#soc-6 {
+  position: relative;
+  font-size: 1em;
+  bottom: 12px;
+}
+
+#soc-7 {
+  position: relative;
+  font-size: 1.1em;
+  top: 12px;
+}
+
+#soc-8 {
+  position: relative;
+  font-size: 1.3em;
+  bottom: 15px;
+}
+
+#soc-9 {
+  position: relative;
+  font-size: 1.4em;
+  top: 15px;
+}
+
+#soc-10 {
+  position: relative;
+  font-size: 1.5em;
+  bottom: 17px;
+  right: 0.7em;
+}
+
+#soc-11 {
+  position: relative;
+  font-size: 1.7em;
+  top: 17px;
+}
+
+#soc-12 {
+  position: relative;
+  font-size: 2.0em;
+  bottom: 20px;
+  right: 1.0em;
 }
 
 /* Responsiveness ==================================*/
