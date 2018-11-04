@@ -8,7 +8,7 @@
   </div>
   <div id="blog-posts">
     <div id="blog-posts-content" class="container">
-      <% for (let i = 0; i < posts.length; i++) { %>
+      <% for (let i = posts.length - 1; i >= 0; i--) { %>
         <div class="blog-post" id="<%= posts[i]._id %>" style="background: linear-gradient(rgba(153, 230, 255, 0.7), rgba(153, 230, 255, 0.7)), url(<%= posts[i].video_thumbnail %>)">
           <a class="blog-post-link" href="/blog/<%= posts[i]._id %>">
             <p class="blog-post-title blog-link"><%= posts[i].title %></p>
